@@ -12,7 +12,7 @@ app.get('/json', function(req, res) {
   }
   else { mes = 'Hellow json'; }
   res.json({
-    "message": process.env
+    "message": mes
   });
 });
 
