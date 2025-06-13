@@ -27,6 +27,12 @@ app.get('/:word/echo', function(req, res, next) {
   res.send({ echo: req.params.word });
 })
 
+app.get('/name', function(req, res) {
+  let firstName = req.query["first"];
+  let lastName = req.query["last"];
+  res.json({ name: firstName + ' ' + lastName });
+})
+
 app.use('/public', express.static(__dirname + '/public'));
 
 
